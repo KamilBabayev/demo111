@@ -6,6 +6,6 @@ url = 'http://api.ipify.org'
 
 params = {'format': 'json'}
 
-req = requests.get(url, parars=params)
+req = requests.get(url, params=params)
 
 print(req.json())
