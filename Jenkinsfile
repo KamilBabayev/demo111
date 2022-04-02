@@ -39,10 +39,7 @@ pipeline {
                  }
                  stage('Flake8 install and test') {
                      steps {
-                              sh """
-                             pip install flake8
- 
-                             """
+                         sh 'pip3 install pytest'
                      }
                  }
 }
