@@ -9,3 +9,4 @@ params = {'format': 'json'}
 req = requests.get(url, params=params)
 
 print(req.json())
+print(req.json()['ip'])
