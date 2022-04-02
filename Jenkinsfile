@@ -19,13 +19,7 @@ pipeline {
                            } 
                            }
                             stage('Deploying now') {
-                            agent {
-                                    any {
-                                            reuseNode true
-                                            image ‘nginx’
-                                           }
-                                    }
-                            
+                            agent any
                               steps {
                                 echo "Docker Created"
                               }
