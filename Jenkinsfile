@@ -6,9 +6,14 @@ pipeline {
                      echo 'Hi, GeekFlare. Starting to build the App.'
                  }
                  }
+                 stage('install prerequsitives') {
+                 steps {
+                    pip3 install requests
+                 }
+                 }
                  stage('Test') {
                  steps {
-                    input('Do you want to proceed?')
+                    python3 demo.py
                  }
                  }
                  stage('Deploy') {
