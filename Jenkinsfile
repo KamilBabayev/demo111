@@ -41,6 +41,7 @@ pipeline {
                      steps {
                          sh """
                          pip3 install pytest
+                         pytest
                          """
                      }
                  }
