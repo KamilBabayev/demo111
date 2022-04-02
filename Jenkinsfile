@@ -8,7 +8,7 @@ pipeline {
                  }
                  stage('install prerequsitives') {
                  steps {
-                    sh  'apt install python3-pip && pip3 install requests'
+                    sh  'pip3 install requests'
                  }
                  }
                  stage('Test') {
