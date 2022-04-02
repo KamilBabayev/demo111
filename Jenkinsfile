@@ -36,6 +36,13 @@ pipeline {
                                 echo "App is Prod Ready"
                               }
                  
-              }
+                 }
+                 stage('Prod') {
+                     steps {
+                         script {
+                             sh 'uptime'
+                         }         
+                     }
+                 }
 }
 }
