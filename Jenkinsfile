@@ -37,10 +37,10 @@ pipeline {
                               }
                  
                  }
-                 stage('Prod') {
+                 stage('Flake8 install and test') {
                      steps {
                          script {
-                             sh 'uptime'
+                             sh 'pip3 install flake3'
                          }         
                      }
                  }
