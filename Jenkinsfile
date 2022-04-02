@@ -8,12 +8,12 @@ pipeline {
                  }
                  stage('install prerequsitives') {
                  steps {
-                    pip3 install requests
+                    sh -c 'pip3 install requests'
                  }
                  }
                  stage('Test') {
                  steps {
-                    python3 demo.py
+                    sh -c 'python3 demo.py'
                  }
                  }
                  stage('Deploy') {
