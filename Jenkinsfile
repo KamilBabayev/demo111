@@ -23,15 +23,7 @@ pipeline {
                                 echo "Start the deploy .."
                            } 
                            }
-                            stage('Deploying now') {
-                            agent any
-                              steps {
-                                echo "Docker Created"
-                              }
-                           }
-                           }
-                           }
-                 stage('Prod') {
+                                           stage('Prod') {
                      steps {
                                 echo "App is Prod Ready"
                               }
@@ -46,5 +38,15 @@ pipeline {
                          """
                      }
                  }
+                          
+                            stage('Deploying now') {
+                            agent any
+                              steps {
+                                echo "Docker Created"
+                              }
+                           }
+                           }
+                           }
+
 }
 }
