@@ -8,7 +8,9 @@ pipeline {
                      echo "${GIT_URL}"
                      script {
                               gv = load "custom.groovy"
+                              gv.buildApp()
                      }
+                     
                  }
                  }
                  stage('install prerequsitives') {
@@ -19,6 +21,9 @@ pipeline {
                  stage('Test') {
                  steps {
                     sh 'python3 demo.py'
+                    script {
+                           gv.testApp()      
+                    }
                  }
                  }
                  stage('Deploy') {
@@ -31,6 +36,9 @@ pipeline {
                                            stage('Prod') {
                      steps {
                                 echo "App is Prod Ready"
+                              script {
+                                    gv.deployApp()
+                              }
                               }
                  
                  }
