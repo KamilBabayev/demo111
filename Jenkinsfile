@@ -3,8 +3,7 @@ pipeline {
          stages {
                  stage('Build') {
                  steps {
-                     echo 'Hi, GeekFlare. Starting to build the App.'
-                     echo env.BRANCH_NAME
+                     echo ${GIT_BRANCH}
                  }
                  }
                  stage('install prerequsitives') {
