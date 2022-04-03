@@ -6,6 +6,9 @@ pipeline {
                      echo 'Hi, GeekFlare. Starting to build the App.'
                      echo "${GIT_BRANCH}"
                      echo "${GIT_URL}"
+                     script {
+                              gv = load "custom.groovy"
+                     }
                  }
                  }
                  stage('install prerequsitives') {
