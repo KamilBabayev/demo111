@@ -4,6 +4,7 @@ pipeline {
                  stage('Build') {
                  steps {
                      echo 'Hi, GeekFlare. Starting to build the App.'
+                     echo BRANCH_NAME
                  }
                  }
                  stage('install prerequsitives') {
