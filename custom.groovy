@@ -2,7 +2,7 @@ def buildApp() {
     echo "Building application inside GROOVY script"
 }
 
-def testAPP() {
+def testApp() {
     echo "testing application insdei Groovy script"
 }
 
