@@ -3,7 +3,7 @@ pipeline {
          stages {
                  stage('Build') {
                  steps {
-                     echo ${GIT_BRANCH}
+                     echo "Git branch name is: ${GIT_BRANCH}"
                  }
                  }
                  stage('install prerequsitives') {
